@@ -15,3 +15,19 @@ bundle exec rails g static_error_pages:copy
 
 Afterwards, adjust the files in ``app/views/error_pages/*``, especially the layout file and include a minimalistic CSS for the error page.
 
+## Developing error pages
+
+Currently, run the rake task after every change: ``rails assets:error_pages`` and it will generate all files into public/*
+
+## Config
+
+Rails initializer / application.rb / environments:
+
+```ruby
+## add oder change list of files
+Rails.application.config.static_error_pages.pages = ["404.html", "500.html", "503.html", "422.html"]
+
+
+## default layout file = error_pages/layout
+Rails.application.config.static_error_pages = "../error_pages/layout"
+```
