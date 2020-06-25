@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.version     = StaticErrorPages::VERSION
   spec.authors     = ["Stefan Wienert"]
   spec.email       = ["info@stefanwienert.de"]
-  spec.homepage    = ""
+  spec.homepage    = "https://github.com/pludoni/rails-static_error_pages"
   spec.summary     = "Generate Rails error pages on deployment using application-controller renderer"
   spec.description = "Generate Rails error pages on deployment using application controller renderer"
   spec.license     = "MIT"

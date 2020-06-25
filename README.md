@@ -1,5 +1,7 @@
 # StaticErrorPages
 
+[![Gem Version](https://badge.fury.io/rb/static_error_pages.svg)](https://badge.fury.io/rb/static_error_pages)
+
 Quick'n Dirty static error pages generator for Rails
 
 - Relies on ``ApplicationController.renderer`` to generate 404.html, 500.html, 503.html, 422.html during deploy
