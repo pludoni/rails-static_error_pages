@@ -31,3 +31,10 @@ Rails.application.config.static_error_pages.pages = ["404.html", "500.html", "50
 ## default layout file = error_pages/layout
 Rails.application.config.static_error_pages = "../error_pages/layout"
 ```
+
+## Webpacker
+
+If you naively link the javascript/stylesheet pack tag, they might end of empty. Depending on your setup, you can try:
+
+- 1. activate ``  extract_css: true`` in ``config/webpacker.yml``
+- 2. use the ``inline_pack_tag`` helper function to fully inline css/js webpack packs
