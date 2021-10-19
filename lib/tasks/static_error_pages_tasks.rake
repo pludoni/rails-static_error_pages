@@ -8,7 +8,7 @@ namespace :assets do
   task error_pages: :environment do
     layout = Rails.application.config.static_error_pages.layout
     Rails.application.config.static_error_pages.pages.each do |file|
-      if Rails.env.version >= '7.0.0'
+      if Rails.version >= '7.0.0'
         out = ApplicationController.renderer.render("error_pages/#{file.remove('.html')}", layout: layout)
       else
         out = ApplicationController.renderer.render("error_pages/#{file}", layout: layout)
