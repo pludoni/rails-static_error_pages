@@ -28,8 +28,8 @@ Rails initializer / application.rb / environments:
 Rails.application.config.static_error_pages.pages = ["404.html", "500.html", "503.html", "422.html"]
 
 
-## default layout file = error_pages/layout
-Rails.application.config.static_error_pages = "../error_pages/layout"
+## default layout file = layouts/error_pages
+Rails.application.config.static_error_pages = "error_pages/layout"
 ```
 
 ## Webpacker
