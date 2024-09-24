@@ -4,6 +4,11 @@ html lang='de'
     meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
     meta[name="viewport" content="width=device-width, initial-scale=1.0"]
     meta(name="robots" content="noindex")
+
+    // supports cold deploy - on first run, sprockets assets:precompile and error pages in first run
+    - if self.respond_to?(:assets_manifest)
+      - self.assets_manifest = Sprockets::Railtie.build_manifest(Rails.application)
+
     == stylesheet_link_tag "application", media: 'all'
     / if you are using Webpacker maybe you can try:
     / - if Rails.env.production?
